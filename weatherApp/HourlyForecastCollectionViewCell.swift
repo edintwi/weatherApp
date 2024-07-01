@@ -69,14 +69,7 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     }
     
     private func setConstraints(){
-        NSLayoutConstraint.activate([
-            forecastStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            forecastStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            forecastStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            forecastStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            
-            iconImageView.heightAnchor.constraint(equalToConstant: 33)
-        ])
+        forecastStackView.setConstraintsToParent(contentView)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
